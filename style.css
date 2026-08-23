@@ -1,0 +1,652 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    font-family: Arial, sans-serif; 
+    background: #0b0b0f; 
+    color: #ffffff; 
+    min-height: 100vh; 
+} 
+ 
+/* ========================= 
+   HEADER 
+========================= */ 
+ 
+header { 
+    text-align: center; 
+    padding: 45px 20px; 
+    background: 
+        linear-gradient( 
+            135deg, 
+            #171225, 
+            #0b0b0f 
+        ); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+} 
+ 
+header h1 { 
+    font-size: 42px; 
+    margin-bottom: 10px; 
+    letter-spacing: 1px; 
+ 
+    background: linear-gradient( 
+        90deg, 
+        #ff4d6d, 
+        #9b5de5 
+    ); 
+ 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+} 
+ 
+header p { 
+    font-size: 18px; 
+    color: #aaa; 
+} 
+ 
+/* ========================= 
+   MAIN 
+========================= */ 
+ 
+main { 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 40px 25px; 
+} 
+ 
+/* ========================= 
+   SEARCH 
+========================= */ 
+ 
+.search-section { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 12px; 
+ 
+    max-width: 920px; 
+    margin: 0 auto 25px; 
+ 
+    flex-wrap: wrap; 
+} 
+ 
+/* ========================= 
+   SEARCH INPUT 
+========================= */ 
+ 
+#searchInput { 
+    width: 400px; 
+    max-width: 100%; 
+    height: 52px; 
+ 
+    padding: 0 18px; 
+ 
+    font-size: 15px; 
+    font-weight: 500; 
+ 
+    border: 1px solid rgba(255, 255, 255, 0.12); 
+    border-radius: 13px; 
+ 
+    background: rgba(255, 255, 255, 0.055); 
+    color: white; 
+ 
+    outline: none; 
+ 
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.04), 
+        0 5px 20px rgba(0, 0, 0, 0.15); 
+ 
+    transition: 
+        border-color 0.25s ease, 
+        box-shadow 0.25s ease, 
+        background 0.25s ease; 
+} 
+ 
+#searchInput::placeholder { 
+    color: #888; 
+} 
+ 
+#searchInput:hover { 
+    border-color: rgba(255, 255, 255, 0.22); 
+} 
+ 
+#searchInput:focus { 
+    border-color: #9b5de5; 
+ 
+    background: rgba(255, 255, 255, 0.075); 
+ 
+    box-shadow: 
+        0 0 0 3px rgba(155, 93, 229, 0.10), 
+        0 8px 25px rgba(0, 0, 0, 0.20); 
+} 
+ 
+/* ========================= 
+   SEARCH BUTTON 
+========================= */ 
+ 
+#searchButton { 
+    height: 52px; 
+ 
+    padding: 0 25px; 
+ 
+    font-size: 15px; 
+    font-weight: bold; 
+ 
+    border: none; 
+    border-radius: 13px; 
+ 
+    background: linear-gradient( 
+        135deg, 
+        #ff4d6d, 
+        #9b5de5 
+    ); 
+ 
+    color: white; 
+ 
+    cursor: pointer; 
+ 
+    box-shadow: 
+        0 7px 20px rgba(155, 93, 229, 0.18); 
+ 
+    transition: 
+        transform 0.2s ease, 
+        box-shadow 0.2s ease, 
+        filter 0.2s ease; 
+} 
+ 
+#searchButton:hover { 
+    transform: translateY(-2px); 
+ 
+    filter: brightness(1.08); 
+ 
+    box-shadow: 
+        0 10px 28px rgba(155, 93, 229, 0.32); 
+} 
+ 
+#searchButton:active { 
+    transform: scale(0.97); 
+} 
+ 
+/* ========================= 
+   GENRE SELECT 
+========================= */ 
+ 
+#genreSelect { 
+    height: 52px; 
+ 
+    min-width: 170px; 
+ 
+    padding: 0 14px; 
+ 
+    border-radius: 13px; 
+ 
+    border: 1px solid rgba(255, 255, 255, 0.12); 
+ 
+    background: rgba(255, 255, 255, 0.055); 
+    color: white; 
+ 
+    font-size: 14px; 
+    font-weight: 500; 
+ 
+    cursor: pointer; 
+    outline: none; 
+ 
+    box-shadow: 
+        0 5px 20px rgba(0, 0, 0, 0.15); 
+ 
+    transition: 
+        border-color 0.25s ease, 
+        background 0.25s ease, 
+        box-shadow 0.25s ease; 
+} 
+ 
+#genreSelect:hover { 
+    background: rgba(255, 255, 255, 0.075); 
+ 
+    border-color: 
+        rgba(155, 93, 229, 0.55); 
+} 
+ 
+#genreSelect:focus { 
+    border-color: #9b5de5; 
+ 
+    box-shadow: 
+        0 0 0 3px rgba(155, 93, 229, 0.10), 
+        0 8px 25px rgba(0, 0, 0, 0.20); 
+} 
+ 
+#genreSelect option { 
+    background: #171720; 
+    color: white; 
+} 
+ 
+/* ========================= 
+   RESULTS 
+========================= */ 
+ 
+#results h2 { 
+    margin-bottom: 25px; 
+ 
+    font-size: 26px; 
+    font-weight: 600; 
+ 
+    letter-spacing: -0.3px; 
+ 
+    color: #f1f1f3; 
+} 
+ 
+/* ========================= 
+   MOVIE GRID 
+========================= */ 
+ 
+#movieContainer { 
+    display: grid; 
+ 
+    grid-template-columns: 
+        repeat(auto-fit, minmax(200px, 1fr)); 
+ 
+    gap: 28px; 
+} 
+ 
+/* ========================= 
+   MOVIE CARD 
+========================= */ 
+ 
+.movie-card { 
+    background: #15151c; 
+ 
+    border: 1px solid rgba(255, 255, 255, 0.06); 
+ 
+    border-radius: 14px; 
+ 
+    overflow: hidden; 
+ 
+    box-shadow: 
+        0 5px 20px rgba(0, 0, 0, 0.35); 
+ 
+    padding-bottom: 15px; 
+ 
+    cursor: pointer; 
+ 
+    opacity: 0; 
+ 
+    transform: translateY(25px); 
+ 
+    animation: 
+        cardAppear 0.6s ease forwards; 
+ 
+    transition: 
+        transform 0.35s ease, 
+        box-shadow 0.35s ease, 
+        border-color 0.35s ease; 
+} 
+ 
+.movie-card:hover {
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: #ffd45a;
+
+    box-shadow:
+        0 0 10px rgba(255, 212, 90, 0.55),
+        0 0 30px rgba(255, 193, 7, 0.4),
+        0 0 55px rgba(255, 193, 7, 0.2),
+        0 20px 45px rgba(0, 0, 0, 0.55);
+}
+ 
+.movie-card:active { 
+    transform: scale(0.98); 
+} 
+ 
+/* ========================= 
+   POSTER 
+========================= */ 
+ 
+.movie-card img { 
+    width: 100%; 
+    height: 300px; 
+ 
+    object-fit: cover; 
+ 
+    display: block; 
+ 
+    transition: 
+        transform 0.5s ease; 
+} 
+ 
+.movie-card:hover img { 
+    transform: scale(1.06); 
+} 
+ 
+/* ========================= 
+   MOVIE TEXT 
+========================= */ 
+ 
+.movie-card h3 { 
+    margin: 14px 15px 7px; 
+ 
+    font-size: 17px; 
+ 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+} 
+ 
+.movie-card p { 
+    margin: 6px 15px; 
+ 
+    color: #999; 
+ 
+    font-size: 14px; 
+} 
+ 
+/* ========================= 
+   NO POSTER 
+========================= */ 
+ 
+.no-poster { 
+    width: 100%; 
+    height: 300px; 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+    align-items: center; 
+ 
+    background: 
+        linear-gradient( 
+            135deg, 
+            #1d1d27, 
+            #101014 
+        ); 
+ 
+    color: #777; 
+ 
+    font-size: 16px; 
+ 
+    text-align: center; 
+} 
+ 
+/* ========================= 
+   CARD ANIMATION 
+========================= */ 
+ 
+@keyframes cardAppear { 
+ 
+    from { 
+        opacity: 0; 
+        transform: translateY(25px); 
+    } 
+ 
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+ 
+} 
+ 
+/* ========================= 
+   MODAL 
+========================= */ 
+ 
+.modal { 
+    position: fixed; 
+ 
+    top: 0; 
+    left: 0; 
+ 
+    width: 100%; 
+    height: 100%; 
+ 
+    background: 
+        rgba(0, 0, 0, 0.78); 
+ 
+    backdrop-filter: blur(8px); 
+ 
+    display: flex; 
+ 
+    justify-content: center; 
+    align-items: center; 
+ 
+    padding: 20px; 
+ 
+    z-index: 1000; 
+ 
+    animation: 
+        modalFade 0.3s ease; 
+} 
+ 
+/* ========================= 
+   MOVIE DETAILS 
+========================= */ 
+ 
+.movie-details { 
+    position: relative; 
+ 
+    display: flex; 
+ 
+    gap: 30px; 
+ 
+    width: 800px; 
+    max-width: 100%; 
+ 
+    background: 
+        linear-gradient( 
+            135deg, 
+            #1a1a23, 
+            #101014 
+        ); 
+ 
+    border: 
+        1px solid rgba(255, 255, 255, 0.1); 
+ 
+    border-radius: 18px; 
+ 
+    padding: 30px; 
+ 
+    max-height: 90vh; 
+ 
+    overflow-y: auto; 
+ 
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.7); 
+ 
+    animation: 
+        modalSlide 0.4s ease; 
+} 
+ 
+/* ========================= 
+   MODAL POSTER 
+========================= */ 
+ 
+.movie-details img { 
+    width: 250px; 
+    height: 375px; 
+ 
+    object-fit: cover; 
+ 
+    border-radius: 12px; 
+ 
+    flex-shrink: 0; 
+} 
+ 
+/* ========================= 
+   MOVIE INFO 
+========================= */ 
+ 
+.movie-info { 
+    flex: 1; 
+    padding-top: 10px; 
+} 
+ 
+.movie-info h2 { 
+    margin-bottom: 18px; 
+ 
+    font-size: 30px; 
+} 
+ 
+.movie-info p { 
+    margin-bottom: 12px; 
+ 
+    color: #bbb; 
+ 
+    line-height: 1.6; 
+} 
+ 
+.movie-info strong { 
+    color: white; 
+} 
+ 
+/* ========================= 
+   CLOSE BUTTON 
+========================= */ 
+ 
+.close-button { 
+    position: absolute; 
+ 
+    top: 12px; 
+    right: 15px; 
+ 
+    width: 38px; 
+    height: 38px; 
+ 
+    border: none; 
+ 
+    border-radius: 50%; 
+ 
+    background: 
+        rgba(255, 255, 255, 0.08); 
+ 
+    color: white; 
+ 
+    font-size: 26px; 
+ 
+    cursor: pointer; 
+ 
+    transition: 
+        background 0.25s ease, 
+        transform 0.25s ease; 
+} 
+ 
+.close-button:hover { 
+    background: #ff4d6d; 
+ 
+    transform: rotate(90deg); 
+} 
+ 
+/* ========================= 
+   MODAL ANIMATIONS 
+========================= */ 
+ 
+@keyframes modalFade { 
+ 
+    from { 
+        opacity: 0; 
+    } 
+ 
+    to { 
+        opacity: 1; 
+    } 
+ 
+} 
+ 
+@keyframes modalSlide { 
+ 
+    from { 
+        opacity: 0; 
+ 
+        transform: 
+            translateY(30px) 
+            scale(0.96); 
+    } 
+ 
+    to { 
+        opacity: 1; 
+ 
+        transform: 
+            translateY(0) 
+            scale(1); 
+    } 
+ 
+} 
+ 
+/* ========================= 
+   MOBILE 
+========================= */ 
+ 
+@media (max-width: 700px) { 
+ 
+    header { 
+        padding: 35px 15px; 
+    } 
+ 
+    header h1 { 
+        font-size: 32px; 
+    } 
+ 
+    header p { 
+        font-size: 15px; 
+    } 
+ 
+    main { 
+        padding: 30px 15px; 
+    } 
+ 
+    .search-section { 
+        flex-direction: column; 
+        align-items: stretch; 
+ 
+        max-width: 500px; 
+        margin-left: auto; 
+        margin-right: auto; 
+    } 
+ 
+    #searchInput, 
+    #genreSelect, 
+    #searchButton { 
+        width: 100%; 
+    } 
+ 
+    #movieContainer { 
+        grid-template-columns: 
+            repeat(2, 1fr); 
+ 
+        gap: 16px; 
+    } 
+ 
+    .movie-card img, 
+    .no-poster { 
+        height: 240px; 
+    } 
+ 
+    .movie-card h3 { 
+        font-size: 15px; 
+    } 
+ 
+    .movie-card p { 
+        font-size: 12px; 
+    } 
+ 
+    .movie-details { 
+        flex-direction: column; 
+ 
+        align-items: center; 
+ 
+        padding: 25px; 
+    } 
+ 
+    .movie-details img { 
+        width: 180px; 
+        height: 270px; 
+    } 
+ 
+    .movie-info h2 { 
+        font-size: 24px; 
+    } 
+ 
+}

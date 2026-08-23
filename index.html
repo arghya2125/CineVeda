@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineVeda</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎬 CineVeda</h1>
+        <p>Discover. Explore. Watch.</p>
+    </header>
+
+    <main>
+
+        <section class="search-section">
+
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Enter movie name..."
+            >
+            <select id="genreSelect">
+                <option value="">All Genres</option>
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="16">Animation</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="18">Drama</option>
+                <option value="27">Horror</option>
+                <option value="10749">Romance</option>
+                <option value="878">Science Fiction</option>
+                <option value="53">Thriller</option>
+            </select>
+            <button id="searchButton">
+                Search
+            </button>
+
+        </section>
+
+        <section id="results">
+
+            <h2 id="resultsTitle">Popular Movies</h2>
+
+            <div id="movieContainer"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
