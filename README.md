@@ -26,15 +26,15 @@ CineVeda is a movie search web application that allows users to search for movie
 
 ### Home / Search
 
-![CineVeda Home](Images/home.png)
+![CineVeda Home](images/home.png)
 
 ### Search Results
 
-![CineVeda Search Results](Images/search_result.png)
+![CineVeda Search Results](images/search_result.png)
 
 ### Movie Details
 
-![CineVeda Movie Details](Images/movie_details.png)
+![CineVeda Movie Details](images/movie_details.png)
 
 ## 🚀 How to Run
 
